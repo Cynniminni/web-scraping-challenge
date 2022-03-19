@@ -105,6 +105,11 @@ def mars_hemispheres() -> list:
     return hemisphere_image_urls
 
 def scrape():
+    """
+    Scrapes data from four web pages and saves it in a Python dictionary. Then writes the final result in a json
+    file called 'data.json' in the Missions_to_Mars directory.
+    :return: None
+    """
     data = {
         "nasa_mars_news": nasa_mars_news(),
         "jpl_mars_space_images": jpl_mars_space_images(),

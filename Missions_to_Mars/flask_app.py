@@ -1,7 +1,8 @@
 import json
 import pymongo
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from jinja2 import Environment, PackageLoader, select_autoescape
+from scrape_mars import scrape
 
 # Initialize Jinja environment
 env = Environment(
@@ -30,12 +31,27 @@ def read_data_json():
 
 @app.route("/scrape")
 def get_scrape_data():
-    # data = read_data_json()
-    # result = data_collection.insert_one(data)
-    return f"<p>hey there</p>"
+    # Read the old scraping data from the json file
+    old_data = read_data_json()
+
+    # Use this as the pointer for replacing the document
+    old_data_pointer = {
+        "jpl_mars_space_images": old_data["jpl_mars_space_images"]
+    }
+
+    # Scrape web page and write the new data to data.json
+    scrape()
+    new_data = read_data_json()
+    print(f"New web scraping data = {new_data}")
+
+    # Insert the data into MongoDB
+    result = data_collection.replace_one(old_data_pointer, new_data)
+    print(f"Replaced old data = {old_data_pointer}")
+    print(f"New data insertion id = {result}")
+    return redirect(url_for('index'))
 
 @app.route("/")
-def test():
+def index():
     # Read data from MongoDB
     data = data_collection.find_one()
     return render_template('index.html', data=data)
