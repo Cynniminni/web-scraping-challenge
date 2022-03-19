@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <!-- <link rel="stylesheet" type="text/css" href="css/font.css"> -->
+      <link rel="stylesheet" type="text/css" href="css/app.css">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Space Image</title>
+   </head>
+   <body>
+      <div class="header">
+         <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand" href="#"><img id="logo" src="image/nasa.png"><span class="logo">Jet Propulsion Laboratory</span>
+            <span class="logo1">California Institute of Technology</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#"><i class="fa fa-bars" aria-hidden="true"></i> &nbsp;&nbsp;MENU &nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+         <div class="floating_text_area">
+            <h2 class="brand_title">FEATURED IMAGE</h2>
+            <h1 class="media_feature_title">Dusty Space Cloud</h1>
+            <br>
+           <a target="_blank" class="showimg fancybox-thumbs" href=""> <button class="btn btn-outline-light"> FULL IMAGE</button></a>
+         </div>
+      </div>
+      <div class="search sticky">
+         <div class="col-md-12">
+            <div class="row">
+               <div class="col-md-6">
+                  <input type="text" name="Search" placeholder="Search">
+               </div>
+               <div class="col-md-6">
+                  <select class="form-select" id="options" aria-label="Default select example">
+                     <option  selected onchange="0" >Mars</option>
+                     <!-- <option data-filter="sun" class="button">Mars</option> -->
+                     <option data-filter="Sun" class="button">Sun</option>
+                     <option data-filter="earth" class="button">Earth</option>
+                     <option data-filter="ida" class="button">Ida</option>
+                     <option data-filter="jupiter" class="button">Jupiter</option>
+                     <option data-filter="venus" class="button">Venus</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container mt-5">
+         <div class="col-md-12">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1>Images</h1>
+               </div>
+               <div class="col-md-6" id="icon">
+                  <div class="icon2"></div>
+                  <div class="icon1"></div>
+               </div>
+            </div>
+         </div>
+         <!-- first div -->
+         <div id="filter" class="div1">
+            <div class="thmbgroup"></div>
+         </div>
+         <!-- first div ends -->
+         <!-- second div starts -->
+         <div id="column" class="col-md-12  grid-margin">
+            <ul class="post-list">
+               <li class="post-heading"></li>
+            </ul>
+         </div>
+         <!-- second div starts -->
+      </div>
+      <div class="first imgcontainer mt-3">
+         <div class="col-md-12">
+            <div class="row">
+               <div class="col-md-3">
+                  <img id="pic" src="">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end -->
+      <div class="module_gallery container">
+         <div class="col-md-12">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="card">
+                     <img class="card-img-top" src="https://www.jpl.nasa.gov/assets/images/content/tmp/images/jpl_photojournal(3x1).jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h5 class="card-title">JPL Photojournal</h5>
+                        <p class="card-text">Access to the full library of publicly released images from various Solar System exploration programs</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="card">
+                     <img class="card-img-top" src="https://www.jpl.nasa.gov/assets/images/content/tmp/images/nasa_images(3x1).jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h5 class="card-title">Great images in NASA</h5>
+                        <p class="card-text">A selection of the best-known images from a half-century of exploration and discovery</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="multi_teaser">
+         <div class="container">
+            <h1>You Might Also Like</h1>
+            <div class="col-md-12 mt-5">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img class="card-img-top" src="https://imagecache.jpl.nasa.gov/images/640x350/C1-PIA24304---CatScanMars-16-640x350.gif" alt="Card image cap">
+                        <div class="card-body">
+                           <p class="card-text">Access to the full library of publicly released images from various Solar System exploration programs</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img class="card-img-top" src="https://imagecache.jpl.nasa.gov/images/640x350/PIA23491-16-640x350.jpg" alt="Card image cap">
+                        <div class="card-body">
+                           <p class="card-text">Access to the full library of publicly released images from various Solar System exploration programs</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img class="card-img-top" src="https://imagecache.jpl.nasa.gov/images/640x350/C1-PIA23180-16-640x350.gif" alt="Card image cap">
+                        <div class="card-body">
+                           <p class="card-text">Access to the full library of publicly released images from various Solar System exploration programs</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer ">
+         <div class="container">
+            <div class="col-md-12">
+               <div class="row">
+                  <div class="col-md-3">
+                     <h4>About JPL</h4>
+                     <ul>
+                        <li>About JPL</li>
+                        <li>JPL Vision</li>
+                        <li>Executive Council</li>
+                        <li>History</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3">
+                     <h4>Education</h4>
+                     <ul>
+                        <li>Intern</li>
+                        <li>Learn</li>
+                        <li>Teach</li>
+                        <li>News</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3">
+                     <h4>Our Sites</h4>
+                     <ul>
+                        <li>Asteroid Watch</li>
+                        <li>Basics of Spaceflight</li>
+                        <li>Cassini - Mission to Saturn</li>
+                        <li>Climate Kids</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3">
+                     <h4>Galleries</h4>
+                     <ul>
+                        <li>JPL Space Images</li>
+                        <li>Videos</li>
+                        <li>Infographics</li>
+                        <li>Photojournal</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<!--<div class="showFullimage">
+	<button class="btn btn-outline-light hideimage" onclick=hideimage()> Close</button>
+	<img class="fullimage fade-in" src="">
+</div>-->
+      <!-- <script src="js/jquery.easeScroll.js"></script>  -->
+      <script src="js/jquery-3.5.1.min.js"></script>
+      <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+      <script src="js/demo.js"></script>
+      <!-- <script src="js/app.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/fancyBox/jquery.fancybox.pack.js?v=2.1.5"></script>
+      <link rel="stylesheet" type="text/css" href="js/fancyBox/jquery.fancybox.css?v=2.1.5" media="screen" />
+      <link rel="stylesheet" type="text/css" href="js/fancyBox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+      <script type="text/javascript" src="js/fancyBox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+   </body>
+</html>

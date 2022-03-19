@@ -9,6 +9,8 @@ pandas = "*"
 requests = "*"
 splinter = "*"
 selenium = "*"
+lxml = "*"
+html5lib = "*"
 
 [dev-packages]
 ipykernel = "*"
