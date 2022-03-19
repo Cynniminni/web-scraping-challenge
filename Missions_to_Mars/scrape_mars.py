@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 from splinter import Browser
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -106,16 +107,16 @@ def mars_hemispheres() -> list:
     return hemisphere_image_urls
 
 def scrape():
-    return {
+    data = {
         "nasa_mars_news": nasa_mars_news(),
         "jpl_mars_space_images": jpl_mars_space_images(),
         "mars_facts": mars_facts(),
         "mars_hemispheres": mars_hemispheres()
     }
 
+    with open('data.json', 'w') as convert_file:
+        convert_file.write(json.dumps(data))
+
 
 if __name__ == "__main__":
-    data = scrape()
-    print(data)
-
-# Step 2 - MongoDB and Flask Application
+    scrape()

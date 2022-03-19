@@ -11,6 +11,7 @@ splinter = "*"
 selenium = "*"
 lxml = "*"
 html5lib = "*"
+flask = "*"
 
 [dev-packages]
 ipykernel = "*"
