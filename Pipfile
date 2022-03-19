@@ -12,6 +12,7 @@ selenium = "*"
 lxml = "*"
 html5lib = "*"
 flask = "*"
+pymongo = "*"
 
 [dev-packages]
 ipykernel = "*"
