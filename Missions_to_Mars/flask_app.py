@@ -30,11 +30,11 @@ def read_data_json():
 
 @app.route("/scrape")
 def get_scrape_data():
-    data = read_data_json()
-    result = data_collection.insert_one(data)
-    return f"<p>tried inserting something into mongo db lol</p>"
+    # data = read_data_json()
+    # result = data_collection.insert_one(data)
+    return f"<p>hey there</p>"
 
-@app.route("/test")
+@app.route("/")
 def test():
     # Read data from MongoDB
     data = data_collection.find_one()

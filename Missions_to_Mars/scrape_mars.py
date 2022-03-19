@@ -51,8 +51,6 @@ def mars_facts() -> str:
 
     # Use Pandas to convert the data to a HTML table string.
     mars_facts_html = mars_facts_data_frame.to_html()
-    print(mars_facts_html)
-
     return mars_facts_html
 
 def mars_hemispheres() -> list:
@@ -119,4 +117,4 @@ def scrape():
 
 
 if __name__ == "__main__":
-    scrape()
+    result = mars_facts()
